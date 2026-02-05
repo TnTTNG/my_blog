@@ -6,6 +6,7 @@ services:
       - "4000:4000" # 确保端口映射存在
     volumes:
       - .:/app # 挂载当前目录，确保博客源码在容器内可见
+      - ~/.ssh:/root/.ssh
     working_dir: /app # 设置工作目录为 /app
     # 移除 stdin_open 和 tty，因为后台运行不需要交互
     # stdin_open: true
